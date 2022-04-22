@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VDIAZ.Semana3.Tarea.VistaNotas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="lblUsuarioConectado" Text="" FontAttributes="Bold"></Label>
+                <Label x:Name="lblTitle" Text="Registro de notas"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Parcial 1 -->
+                    <Label x:Name="lblParcial1" class="midTitle" Text="Parcial 1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                    <Label Text="Aportes" Grid.Row="1" Grid.Column="0"></Label>
+                    <Entry x:Name="txtAportesP1" Grid.Row="1" Grid.Column="1" Keyboard="Numeric" TextChanged="txtAportesP1_TextChanged"></Entry>
+                    <Label Text="Examen" Grid.Row="2" Grid.Column="0"></Label>
+                    <Entry x:Name="txtExamenP1" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" TextChanged="txtExamenP1_TextChanged"></Entry>
+                    <Label Text="Nota Parcial 1" Grid.Row="3" Grid.Column="0"></Label>
+                    <Entry x:Name="txtNotaP1" Grid.Row="3" Grid.Column="1" IsReadOnly="True"></Entry>
+
+                    <!-- Parcial 2 -->
+                    <Label x:Name="lblParcial2" class="midTitle" Text="Parcial 2" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+                    <Label Text="Aportes" Grid.Row="5" Grid.Column="0"></Label>
+                    <Entry x:Name="txtAportesP2" Grid.Row="5" Grid.Column="1" Keyboard="Numeric" TextChanged="txtAportesP2_TextChanged"></Entry>
+                    <Label Text="Examen" Grid.Row="6" Grid.Column="0"></Label>
+                    <Entry x:Name="txtExamenP2" Grid.Row="6" Grid.Column="1" Keyboard="Numeric" TextChanged="txtExamenP2_TextChanged"></Entry>
+                    <Label Text="Nota Parcial 2" Grid.Row="7" Grid.Column="0"></Label>
+                    <Entry x:Name="txtNotaP2" Grid.Row="7" Grid.Column="1" IsReadOnly="True"></Entry>
+
+                    <!-- Nota final -->
+                    <Label x:Name="lblNotasFinales" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" class="midTitle" Text="Final"></Label>
+                    <Label Text="Nota" Grid.Row="9" Grid.Column="0"></Label>
+                    <Entry x:Name="txtNotaFinal" Grid.Row="9" Grid.Column="1" IsReadOnly="True"></Entry>
+                    <Label Text="OBS." Grid.Row="10" Grid.Column="0"></Label>
+                    <Label x:Name="lblObservacion" Text="" Grid.Row="10" Grid.Column="1"></Label>
+
+                    <Button x:Name="btnCalcular" Grid.Row="11" Grid.Column="0" Text="Calcular" Clicked="btnCalcular_Clicked"></Button>
+                    <Button x:Name="btnLimpiar" Grid.Row="11" Grid.Column="1" Text="Nuevo" Clicked="btnLimpiar_Clicked"></Button>
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
